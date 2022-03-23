@@ -31,16 +31,9 @@ func _physics_process(delta):
 	if door_slide1 == 'True':
 		pass
 	vel = move_and_collide(vel*delta)
+	if Input.is_action_pressed('e') and vel and get_tree().current_scene.name == 'Node2D':
+		scene = 1
+
 
 func _on_Area2D_body_entered(body):
-	print ('a')
-	get_tree().change_scene("res://Scenes/Lvl 1/Gen.tscn")
-	
-func _on_Area2D2_body_entered(body):
-	print ('a')
-	
-func _on_Area2D3_body_entered(body):
-	print ('a')
-
-func _on_door_button_body_entered(body):
-	door_slide1 = 'True'
+	pass # Replace with function body.

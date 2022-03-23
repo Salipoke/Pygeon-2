@@ -1,25 +1,44 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Level Selection/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Level Selection/Wall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Level Selection/sidewall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Level Selection/Arealvl.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/Level Selection/Player.gd" type="Script" id=5]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 513.25, 1.5 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 512.75, 1.5 )
+
+[node name="Level_Sel" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 511, 435 )
+scale = Vector2( 0.991146, 0.987048 )
+script = ExtResource( 5 )
 
 [node name="up_wall" parent="." instance=ExtResource( 2 )]
-position = Vector2( 18, 7 )
+position = Vector2( 3, 7.5 )
+
+[node name="CollisionShape2D" parent="up_wall" index="0"]
+position = Vector2( 509.75, -9 )
+shape = SubResource( 2 )
 
 [node name="down_wall" parent="." instance=ExtResource( 2 )]
-position = Vector2( 3, 611 )
+position = Vector2( 3, 610.5 )
+
+[node name="CollisionShape2D" parent="down_wall" index="0"]
+position = Vector2( 509.25, -9 )
+shape = SubResource( 1 )
 
 [node name="left_wall" parent="." instance=ExtResource( 2 )]
-position = Vector2( -13, -32 )
+position = Vector2( -10.5, -33 )
 rotation = 1.5708
 
 [node name="right_wall" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1017, -43 )
+position = Vector2( 1016.5, -43 )
 rotation = 1.5708
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 3 )]
@@ -27,3 +46,19 @@ position = Vector2( 308, 150 )
 
 [node name="StaticBody2D2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 716, 150 )
+
+[node name="Area2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 140, 85 )
+
+[node name="Area2D2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 510.5, 85 )
+
+[node name="Area2D3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 884, 85 )
+
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Player" method="_on_Area2D2_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="Player" method="_on_Area2D3_body_entered"]
+
+[editable path="up_wall"]
+[editable path="down_wall"]
