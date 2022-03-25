@@ -1,13 +1,15 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Level Selection/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Level Selection/Wall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Lvl 1/doorbutton.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Lvl 1/box.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scripts/lvl1/box.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Lvl 1/2nPlayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Lvl 1/button_2nPlayer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Lvl 1/innerwalls.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Lvl 1/long_innerwalls.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 512.75, 127 )
+extents = Vector2( 512.75, 11 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 513.25, 1.5 )
@@ -16,6 +18,7 @@ extents = Vector2( 513.25, 1.5 )
 position = Vector2( 0, 6 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 518, 139 )
 scale = Vector2( 0.991146, 0.987048 )
 
 [node name="right_wall" parent="." instance=ExtResource( 2 )]
@@ -26,29 +29,101 @@ rotation = 1.5708
 position = Vector2( -10.5, -33 )
 rotation = 1.5708
 
+[node name="left_wall3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 724, -9 )
+rotation = 1.5708
+
+[node name="left_wall2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 299, -11 )
+rotation = 1.5708
+
 [node name="down_wall" parent="." instance=ExtResource( 2 )]
 position = Vector2( 3, 610.5 )
 
 [node name="CollisionShape2D" parent="down_wall" index="0"]
-position = Vector2( 509.25, 116.5 )
+position = Vector2( 509, -4.5 )
 shape = SubResource( 1 )
 
 [node name="up_wall" parent="." instance=ExtResource( 2 )]
 position = Vector2( 3, 7.5 )
 
 [node name="CollisionShape2D" parent="up_wall" index="0"]
-position = Vector2( 509.75, -9 )
+position = Vector2( 511, -14.5 )
 shape = SubResource( 2 )
 
 [node name="door_button" parent="." instance=ExtResource( 3 )]
-position = Vector2( 55, 546 )
+position = Vector2( 517, 512 )
 
-[node name="RigidBody2D" parent="." instance=ExtResource( 4 )]
-position = Vector2( 824, 454 )
-script = ExtResource( 5 )
+[node name="2nPlayer2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 115, 40 )
+scale = Vector2( 0.98237, 0.974264 )
+
+[node name="2nPlayer" parent="." instance=ExtResource( 4 )]
+position = Vector2( 909, 40 )
+
+[node name="Area2D2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 945, 565 )
+
+[node name="Area2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 80, 564 )
+
+[node name="short" parent="." instance=ExtResource( 6 )]
+position = Vector2( 894, 90 )
+
+[node name="short2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 58, 99 )
+
+[node name="short3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 176, 99 )
+
+[node name="short4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 246, 196 )
+
+[node name="short5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 173, 284 )
+
+[node name="short6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 247, 442 )
+
+[node name="short7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 130, 442 )
+
+[node name="short8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 794, 332 )
+
+[node name="short9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 943, 140 )
+rotation = 1.5708
+
+[node name="short10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 893, 279 )
+rotation = -3.14159
+
+[node name="long" parent="." instance=ExtResource( 7 )]
+position = Vector2( 107, 219 )
+
+[node name="long2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1230, 225 )
+rotation = 1.5708
+
+[node name="long3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 845, 211 )
+
+[node name="long4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 969, 423 )
+rotation = 1.5708
 
 [connection signal="body_entered" from="door_button" to="Player" method="_on_door_button_body_entered"]
-[connection signal="ready" from="RigidBody2D" to="Player" method="_on_RigidBody2D_ready"]
+[connection signal="body_entered" from="door_button" to="2nPlayer2" method="_on_door_button_body_entered"]
+[connection signal="body_entered" from="door_button" to="2nPlayer" method="_on_door_button_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Player" method="_on_Area2D2_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="2nPlayer2" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="Player" method="_on_Area2D2_body_exited"]
+[connection signal="body_exited" from="Area2D2" to="2nPlayer" method="_on_Area2D2_body_exited"]
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D" to="2nPlayer" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Player" method="_on_Area2D_body_exited"]
+[connection signal="body_exited" from="Area2D" to="2nPlayer" method="_on_Area2D_body_exited"]
 
 [editable path="down_wall"]
 [editable path="up_wall"]

@@ -14,6 +14,10 @@ config/name="Pygeon- 2"
 run/main_scene="res://Scenes/Level Selection/Node2D.tscn"
 config/icon="res://Scenes/Level Selection/icon.png"
 
+[autoload]
+
+Global="*res://Scripts/global.gd"
+
 [input]
 
 up={

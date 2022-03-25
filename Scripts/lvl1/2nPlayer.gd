@@ -8,15 +8,16 @@ var door_slide1 = 'False'
 export var inertia = 50
 var scene = 0
 var dir = Vector2(0,0)
-var in_button_move = false
+var in_button_move = true
 var check = Vector2(0,0)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	position = Vector2(512,300)
+	pass
 func _physics_process(delta):
 	if check == Vector2(1,1):
-		get_tree().change_scene("res://Scenes/Level Selection/Node2D.tscn")
+		in_button_move = true
 	if in_button_move == true:
 		pass
 	else:
@@ -33,17 +34,17 @@ func _physics_process(delta):
 		if Input.is_action_pressed("down"):
 			vel += Vector2.DOWN * base_vel
 			dir[1] = 0
+		if Input.is_action_pressed('e'):
+			in_button_move = true
 		if door_slide1 == 'True':
 			pass
 		vel = move_and_collide(vel*delta)
-	if Input.is_action_pressed('e'):
-		in_button_move = false
-	print (in_button_move)
+
 
 
 func _on_door_button_body_entered(body):
 	if body.name == 'Player':
-		in_button_move = true
+		in_button_move = false
 
 
 func _on_Area2D_body_entered(body):
@@ -54,9 +55,10 @@ func _on_Area2D2_body_entered(body):
 	check[1] = 1
 
 
+
 func _on_Area2D_body_exited(body):
-	check[0] = 0
+	pass # Replace with function body.
 
 
 func _on_Area2D2_body_exited(body):
-	check[1] = 0
+	pass # Replace with function body.
