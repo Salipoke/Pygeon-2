@@ -62,7 +62,7 @@ scale = Vector2( 0.98237, 0.974264 )
 position = Vector2( 909, 40 )
 
 [node name="Area2D2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 945, 565 )
+position = Vector2( 944, 565 )
 
 [node name="Area2D" parent="." instance=ExtResource( 5 )]
 position = Vector2( 80, 564 )
@@ -74,13 +74,13 @@ position = Vector2( 894, 90 )
 position = Vector2( 58, 99 )
 
 [node name="short3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 176, 99 )
+position = Vector2( 249, 99 )
 
 [node name="short4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 246, 196 )
+position = Vector2( 165, 196 )
 
 [node name="short5" parent="." instance=ExtResource( 6 )]
-position = Vector2( 173, 284 )
+position = Vector2( 257, 284 )
 
 [node name="short6" parent="." instance=ExtResource( 6 )]
 position = Vector2( 247, 442 )
@@ -98,6 +98,10 @@ rotation = 1.5708
 [node name="short10" parent="." instance=ExtResource( 6 )]
 position = Vector2( 893, 279 )
 rotation = -3.14159
+
+[node name="short11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 852, 559 )
+rotation = 1.5708
 
 [node name="long" parent="." instance=ExtResource( 7 )]
 position = Vector2( 107, 219 )
