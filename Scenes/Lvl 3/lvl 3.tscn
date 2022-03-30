@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Level Selection/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/lvl3/Playerlvl3.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Level Selection/Wall.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 513.25, 1.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 512.75, 1.5 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 511, 435 )
+scale = Vector2( 0.991146, 0.987048 )
+script = ExtResource( 2 )
+
+[node name="up_wall" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3, 7.5 )
+
+[node name="CollisionShape2D" parent="up_wall" index="0"]
+position = Vector2( 509.75, -9 )
+shape = SubResource( 1 )
+
+[node name="down_wall" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3, 610.5 )
+
+[node name="CollisionShape2D" parent="down_wall" index="0"]
+position = Vector2( 509.25, -9 )
+shape = SubResource( 2 )
+
+[node name="right_wall" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1016.5, -43 )
+rotation = 1.5708
+
+[node name="left_wall" parent="." instance=ExtResource( 3 )]
+position = Vector2( -10.5, -33 )
+rotation = 1.5708
+
+[editable path="up_wall"]
+[editable path="down_wall"]

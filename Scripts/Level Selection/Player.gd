@@ -42,6 +42,7 @@ func _on_Area2D2_body_entered(body):
 	
 func _on_Area2D3_body_entered(body):
 	print ('a')
+	get_tree().change_scene("res://Scenes/Lvl 3/lvl 3.tscn")
 
 func _on_door_button_body_entered(body):
 	door_slide1 = 'True'

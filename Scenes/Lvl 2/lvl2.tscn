@@ -23,21 +23,6 @@ position = Vector2( 3, 7.5 )
 position = Vector2( 509.75, -9 )
 shape = SubResource( 1 )
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 512, 300 )
-scale = Vector2( 0.991146, 0.987048 )
-script = ExtResource( 3 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-scale = Vector2( 0.518577, 0.542294 )
-current = true
-zoom = Vector2( 0.5, 0.5 )
-
-[node name="DarkEffect" type="Sprite" parent="Player"]
-position = Vector2( -0.504456, 0.253296 )
-scale = Vector2( 0.527649, 0.5587 )
-texture = ExtResource( 1 )
-
 [node name="down_wall" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3, 610.5 )
 
@@ -57,7 +42,7 @@ rotation = 1.5708
 position = Vector2( -121, 46 )
 
 [node name="small2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 474, 389 )
+position = Vector2( 474, 388 )
 rotation = 1.5708
 
 [node name="small3" parent="." instance=ExtResource( 6 )]
@@ -80,14 +65,46 @@ rotation = -3.14159
 position = Vector2( 707, 343 )
 rotation = -3.14159
 
+[node name="small8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 892, 435 )
+rotation = 5.07036e-06
+
+[node name="small9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 50, 513 )
+rotation = 1.01407e-05
+
+[node name="small10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 670, 143 )
+rotation = 2.02815e-05
+
+[node name="small11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 425, 114 )
+rotation = 1.5708
+
+[node name="small12" parent="." instance=ExtResource( 6 )]
+position = Vector2( 725, 188 )
+rotation = 1.5708
+
+[node name="small13" parent="." instance=ExtResource( 6 )]
+position = Vector2( 725, 128 )
+rotation = 1.57081
+
+[node name="small14" parent="." instance=ExtResource( 6 )]
+position = Vector2( 307, 187 )
+rotation = 1.5708
+
+[node name="small15" parent="." instance=ExtResource( 6 )]
+position = Vector2( 370, 69 )
+rotation = -3.14159
+
 [node name="large" parent="." instance=ExtResource( 7 )]
-position = Vector2( -124, 115 )
+position = Vector2( -230, 140 )
 
 [node name="large2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 439, 242 )
 
 [node name="large3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 378, 434 )
+position = Vector2( 378, 433 )
 
 [node name="large4" parent="." instance=ExtResource( 7 )]
 position = Vector2( 239, 433 )
@@ -97,17 +114,13 @@ position = Vector2( 144, 337 )
 rotation = 1.5708
 
 [node name="large6" parent="." instance=ExtResource( 7 )]
-position = Vector2( 101, 118 )
+position = Vector2( 100, 118 )
 
 [node name="large7" parent="." instance=ExtResource( 7 )]
 position = Vector2( 239, 242 )
 
-[node name="large8" parent="." instance=ExtResource( 7 )]
-position = Vector2( 314, 144 )
-rotation = 1.5708
-
 [node name="large9" parent="." instance=ExtResource( 7 )]
-position = Vector2( 378, 344 )
+position = Vector2( 378, 343 )
 
 [node name="large10" parent="." instance=ExtResource( 7 )]
 position = Vector2( 630, 242 )
@@ -126,8 +139,38 @@ rotation = 1.5708
 position = Vector2( 679, 540 )
 rotation = 1.5708
 
+[node name="large15" parent="." instance=ExtResource( 7 )]
+position = Vector2( 945, 106 )
+
+[node name="large16" parent="." instance=ExtResource( 7 )]
+position = Vector2( 520, 143 )
+rotation = -3.14159
+
+[node name="large17" parent="." instance=ExtResource( 7 )]
+position = Vector2( 520, 69 )
+rotation = 1.46071e-05
+
 [node name="button" parent="." instance=ExtResource( 5 )]
-position = Vector2( 55, 46 )
+position = Vector2( 51, 43 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 512, 300 )
+scale = Vector2( 0.991146, 0.987048 )
+script = ExtResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+scale = Vector2( 0.518577, 0.542294 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+smoothing_enabled = true
+smoothing_speed = 1.0
+
+[node name="DarkEffect" type="Sprite" parent="Player"]
+position = Vector2( -0.504456, 0.253296 )
+scale = Vector2( 0.527649, 0.5587 )
+texture = ExtResource( 1 )
+
+[connection signal="body_entered" from="button" to="Player" method="_on_button_body_entered"]
 
 [editable path="up_wall"]
 [editable path="down_wall"]

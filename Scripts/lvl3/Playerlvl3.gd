@@ -2,18 +2,21 @@ extends KinematicBody2D
 
 
 
-var base_vel = 200
-var vel = Vector2(0,0)
+var base_vel = 250
+var jump = 400 * Vector2.UP
+var vel = Vector2.DOWN * base_vel
+var door_slide1 = 'False'
+var grav = Vector2.DOWN * 980
 var scene = 0
 var dir = Vector2(0,0)
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	position = Vector2(600,300)
+	position = Vector2(512,300)
 	
 func _physics_process(delta):
-	vel = Vector2(0,0)
+	vel.x = 0
 	if Input.is_action_pressed("right"):
 		vel += Vector2.RIGHT * base_vel
 		dir[0] = 0
@@ -21,15 +24,8 @@ func _physics_process(delta):
 		vel += Vector2.LEFT * base_vel
 		dir[0] = 1
 	if Input.is_action_pressed("up"):
-		vel += Vector2.UP * base_vel
+		vel.y = 0
+		vel += jump
 		dir[1] = 1
-	if Input.is_action_pressed("down"):
-		vel += Vector2.DOWN * base_vel
-		dir[1] = 0
-	print(position)
-	vel = move_and_slide(vel)
-
-
-func _on_button_body_entered(body):
-	if body.name == 'Player':
-		get_tree().change_scene("res://Scenes/Level Selection/Node2D.tscn")
+	vel += grav*delta
+	vel = move_and_slide(vel,Vector2.UP)
