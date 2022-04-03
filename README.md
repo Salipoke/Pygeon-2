@@ -1,2 +1,5 @@
 # Pygeon-2
-Hola
+3 Nivells
+No importa l'ordre
+No hi ha sons
+#
