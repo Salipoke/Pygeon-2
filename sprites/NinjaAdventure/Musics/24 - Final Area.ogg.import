@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/24 - Final Area.ogg-7366135d4db8fed1079b3fa1984d91d9.oggstr"
+
+[deps]
+
+source_file="res://sprites/NinjaAdventure/Musics/24 - Final Area.ogg"
+dest_files=[ "res://.import/24 - Final Area.ogg-7366135d4db8fed1079b3fa1984d91d9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

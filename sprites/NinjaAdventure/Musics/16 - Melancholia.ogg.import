@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/16 - Melancholia.ogg-c51e4dd6b1bd4c9e1feb03b0d3eb2e96.oggstr"
+
+[deps]
+
+source_file="res://sprites/NinjaAdventure/Musics/16 - Melancholia.ogg"
+dest_files=[ "res://.import/16 - Melancholia.ogg-c51e4dd6b1bd4c9e1feb03b0d3eb2e96.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

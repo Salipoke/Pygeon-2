@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/6 - Story (Short).ogg-603b6102a6bc80dd0e52a5520486f950.oggstr"
+
+[deps]
+
+source_file="res://sprites/NinjaAdventure/Musics/6 - Story (Short).ogg"
+dest_files=[ "res://.import/6 - Story (Short).ogg-603b6102a6bc80dd0e52a5520486f950.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

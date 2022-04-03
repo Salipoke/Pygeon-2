@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/4 - Village.ogg-1a6c9da81e7d42e0f7a217e03ec925e6.oggstr"
+
+[deps]
+
+source_file="res://sprites/NinjaAdventure/Musics/4 - Village.ogg"
+dest_files=[ "res://.import/4 - Village.ogg-1a6c9da81e7d42e0f7a217e03ec925e6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Accept.wav-25bd3228d33dd898441c4e0420af5c6c.sample"
+
+[deps]
+
+source_file="res://sprites/NinjaAdventure/Sounds/Menu/Accept.wav"
+dest_files=[ "res://.import/Accept.wav-25bd3228d33dd898441c4e0420af5c6c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

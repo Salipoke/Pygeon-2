@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Fire.wav-38439fb64fcaa21ee29069fab3a2697c.sample"
+
+[deps]
+
+source_file="res://sprites/NinjaAdventure/Sounds/Game/Fire.wav"
+dest_files=[ "res://.import/Fire.wav-38439fb64fcaa21ee29069fab3a2697c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

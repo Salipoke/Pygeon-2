@@ -1,0 +1,175 @@
+[gd_scene load_steps=56 format=2]
+
+[ext_resource path="res://Scripts/lvl3/Playerlvl3.gd" type="Script" id=1]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Run/Warrior_Run_2.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Run/Warrior_Run_5.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Jump/Warrior_Jump_3.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Run/Warrior_Run_4.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Level Selection/icon.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Run/Warrior_Run_8.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/idle/Warrior_Idle_3.png" type="Texture" id=8]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Run/Warrior_Run_1.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Run/Warrior_Run_6.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/idle/Warrior_Idle_5.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/idle/Warrior_Idle_6.png" type="Texture" id=12]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Run/Warrior_Run_3.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Run/Warrior_Run_7.png" type="Texture" id=14]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Jump/Warrior_Jump_1.png" type="Texture" id=15]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Jump/Warrior_Jump_2.png" type="Texture" id=16]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/idle/Warrior_Idle_2.png" type="Texture" id=17]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/idle/Warrior_Idle_4.png" type="Texture" id=18]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/idle/Warrior_Idle_1.png" type="Texture" id=19]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Slide/Warrior-Slide_4.png" type="Texture" id=20]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Slide/Warrior-Slide_5.png" type="Texture" id=21]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/SlideNoEffect/Warrior-SlideNoEffect_2.png" type="Texture" id=22]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/SlideNoEffect/Warrior-SlideNoEffect_3.png" type="Texture" id=23]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/SlideNoEffect/Warrior-SlideNoEffect_4.png" type="Texture" id=24]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/SlideNoEffect/Warrior-SlideNoEffect_5.png" type="Texture" id=25]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Slide/Warrior-Slide_1.png" type="Texture" id=26]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Slide/Warrior-Slide_2.png" type="Texture" id=27]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Slide/Warrior-Slide_3.png" type="Texture" id=28]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/SlideNoEffect/Warrior-SlideNoEffect_1.png" type="Texture" id=29]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Fall/Warrior_Fall_3.png" type="Texture" id=30]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Death-Effect/Warrior_Death_6.png" type="Texture" id=31]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Death-Effect/Warrior_Death_5.png" type="Texture" id=32]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Death-Effect/Warrior_Death_9.png" type="Texture" id=33]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Death-Effect/Warrior_Death_4.png" type="Texture" id=34]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Death-Effect/Warrior_Death_1.png" type="Texture" id=35]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Death-Effect/Warrior_Death_3.png" type="Texture" id=36]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Death-Effect/Warrior_Death_8.png" type="Texture" id=37]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Death-Effect/Warrior_Death_11.png" type="Texture" id=38]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Fall/Warrior_Fall_1.png" type="Texture" id=39]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Fall/Warrior_Fall_2.png" type="Texture" id=40]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Death-Effect/Warrior_Death_7.png" type="Texture" id=41]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Death-Effect/Warrior_Death_2.png" type="Texture" id=42]
+[ext_resource path="res://sprites/Warrior/Individual Sprite/Death-Effect/Warrior_Death_10.png" type="Texture" id=43]
+[ext_resource path="res://sprites/Warrior/SpriteSheet/Warrior_Sheet-Effect.png" type="Texture" id=44]
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 44 )
+region = Rect2( 0, 440, 69, 44 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 44 )
+region = Rect2( 69, 440, 69, 44 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 44 )
+region = Rect2( 138, 440, 69, 44 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 44 )
+region = Rect2( 0, 0, 69, 44 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 44 )
+region = Rect2( 69, 0, 69, 44 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 44 )
+region = Rect2( 138, 0, 69, 44 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 44 )
+region = Rect2( 207, 0, 69, 44 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 44 )
+region = Rect2( 276, 0, 69, 44 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 44 )
+region = Rect2( 345, 0, 69, 44 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "on_wall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 17 ), ExtResource( 8 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "stand",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 2 ), ExtResource( 13 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "walk_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "slide_air",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 42 ), ExtResource( 36 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 41 ), ExtResource( 37 ), ExtResource( 33 ), ExtResource( 43 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "death",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 39 ), ExtResource( 40 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "slide_floor",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 28.0
+height = 12.0
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 60, 439 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 6 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 8, -6 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 4 )
+animation = "stand"
+frame = 1
+playing = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.8, 0.8 )
+process_mode = 0
+limit_left = 0
+limit_top = -412
+limit_right = 1024
+limit_bottom = 600
+drag_margin_h_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 5.99998 )
+scale = Vector2( -0.812883, 1 )
+shape = SubResource( 3 )

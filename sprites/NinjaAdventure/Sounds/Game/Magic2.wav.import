@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Magic2.wav-86ecf3be2a76e83bb662fef9cf456843.sample"
+
+[deps]
+
+source_file="res://sprites/NinjaAdventure/Sounds/Game/Magic2.wav"
+dest_files=[ "res://.import/Magic2.wav-86ecf3be2a76e83bb662fef9cf456843.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

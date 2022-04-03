@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://sprites/victory/WhatsApp Image 2022-04-01 at 5.10.40 PM.jpeg" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WhatsAppImage2022-04-01At51040Pm" type="Sprite" parent="."]
+position = Vector2( 511, 300 )
+scale = Vector2( 0.770802, 0.803836 )
+texture = ExtResource( 1 )

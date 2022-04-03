@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/lvl3/moving_plat.gd" type="Script" id=1]
+[ext_resource path="res://sprites/kenney_scribbledungeons/PNG/Double (128px)/arrow.png" type="Texture" id=2]
+
+[sub_resource type="CanvasItemMaterial" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 53, 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="Arrow" type="Sprite" parent="."]
+modulate = Color( 0.74902, 0.301961, 0.784314, 1 )
+material = SubResource( 2 )
+position = Vector2( 0.513277, -0.0864877 )
+rotation = 1.5708
+scale = Vector2( 0.495389, 0.871237 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )

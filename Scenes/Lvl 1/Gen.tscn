@@ -1,71 +1,267 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=41 format=2]
 
-[ext_resource path="res://Scenes/Level Selection/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Lvl 1/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Level Selection/Wall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Lvl 1/doorbutton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Lvl 1/2nPlayer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Lvl 1/button_2nPlayer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Lvl 1/innerwalls.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Lvl 1/long_innerwalls.tscn" type="PackedScene" id=7]
+[ext_resource path="res://sprites/Level Selection/background.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/lvl1/2nPlayer.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Level Selection/icon.png" type="Texture" id=10]
+[ext_resource path="res://sprites/TopDownCharacter/Character/Character_Left.png" type="Texture" id=11]
+[ext_resource path="res://sprites/TopDownCharacter/Character/Character_Right.png" type="Texture" id=12]
+[ext_resource path="res://sprites/TopDownCharacter/Character/Character_Up.png" type="Texture" id=13]
+[ext_resource path="res://sprites/TopDownCharacter/Character/Character_Down.png" type="Texture" id=14]
+[ext_resource path="res://sprites/controls.png" type="Texture" id=15]
+[ext_resource path="res://sprites/objectiu.png" type="Texture" id=16]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 513.25, 0.499103 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 512.75, 11 )
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 513.25, 1.5 )
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 14 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 14 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 14 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 14 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 14 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "up",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 23 ) ],
+"loop": true,
+"name": "stand",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"loop": true,
+"name": "down",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 20 ) ],
+"loop": true,
+"name": "st_right",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 22 ) ],
+"loop": true,
+"name": "st_left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "walk_left",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 21 ) ],
+"loop": true,
+"name": "st_up",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "walk_right",
+"speed": 10.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 14.2513
+height = 10.1972
 
 [node name="Node2D" type="Node2D"]
-position = Vector2( 0, 6 )
+position = Vector2( -1, 7 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 518, 139 )
-scale = Vector2( 0.991146, 0.987048 )
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 512, 293 )
+texture = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -1.0
+margin_top = -2.0
+margin_right = 303.0
+margin_bottom = 588.0
+color = Color( 0.992157, 0.929412, 0.580392, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 735.0
+margin_top = -1.0
+margin_right = 1021.0
+margin_bottom = 589.0
+color = Color( 0.466667, 0.87451, 0.905882, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 311.0
+margin_top = -1.0
+margin_right = 730.0
+margin_bottom = 588.0
+color = Color( 0.584314, 0.945098, 0.482353, 1 )
+
+[node name="up_wall" parent="." instance=ExtResource( 2 )]
+position = Vector2( -9, -10.5 )
+
+[node name="CollisionShape2D" parent="up_wall" index="18"]
+position = Vector2( 511, -8.50092 )
+shape = SubResource( 2 )
 
 [node name="right_wall" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1016.5, -43 )
-rotation = 1.5708
 
 [node name="left_wall" parent="." instance=ExtResource( 2 )]
-position = Vector2( -10.5, -33 )
-rotation = 1.5708
-
-[node name="left_wall3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 724, -9 )
-rotation = 1.5708
+visible = false
+position = Vector2( -2, 2 )
+rotation = 0.0
 
 [node name="left_wall2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 299, -11 )
-rotation = 1.5708
+
+[node name="left_wall3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 724, -9 )
 
 [node name="down_wall" parent="." instance=ExtResource( 2 )]
 position = Vector2( 3, 610.5 )
 
-[node name="CollisionShape2D" parent="down_wall" index="0"]
-position = Vector2( 509, -4.5 )
+[node name="CollisionShape2D" parent="down_wall" index="18"]
+position = Vector2( -9.50183, -510 )
+rotation = 1.5708
 shape = SubResource( 1 )
-
-[node name="up_wall" parent="." instance=ExtResource( 2 )]
-position = Vector2( 3, 7.5 )
-
-[node name="CollisionShape2D" parent="up_wall" index="0"]
-position = Vector2( 511, -14.5 )
-shape = SubResource( 2 )
 
 [node name="door_button" parent="." instance=ExtResource( 3 )]
 position = Vector2( 517, 512 )
 
-[node name="2nPlayer2" parent="." instance=ExtResource( 4 )]
+[node name="2nPlayer2" type="KinematicBody2D" parent="."]
+modulate = Color( 0.815686, 0.968627, 0.27451, 1 )
 position = Vector2( 115, 40 )
 scale = Vector2( 0.98237, 0.974264 )
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="2nPlayer2"]
+visible = false
+texture = ExtResource( 10 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="2nPlayer2"]
+modulate = Color( 1, 0.92549, 0.305882, 1 )
+position = Vector2( -3.05176e-05, -7.09185 )
+scale = Vector2( 2.3951, 2.31746 )
+frames = SubResource( 24 )
+animation = "down"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2nPlayer2"]
+scale = Vector2( 1, 0.848722 )
+shape = SubResource( 3 )
 
 [node name="2nPlayer" parent="." instance=ExtResource( 4 )]
 position = Vector2( 909, 40 )
 
 [node name="Area2D2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 944, 565 )
+position = Vector2( 784, 275 )
 
 [node name="Area2D" parent="." instance=ExtResource( 5 )]
-position = Vector2( 80, 564 )
+position = Vector2( 245, 518 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
 
 [node name="short" parent="." instance=ExtResource( 6 )]
 position = Vector2( 894, 90 )
@@ -74,33 +270,36 @@ position = Vector2( 894, 90 )
 position = Vector2( 58, 99 )
 
 [node name="short3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 249, 99 )
+position = Vector2( 245, 99 )
 
 [node name="short4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 165, 196 )
 
 [node name="short5" parent="." instance=ExtResource( 6 )]
-position = Vector2( 257, 284 )
+position = Vector2( 244, 284 )
 
 [node name="short6" parent="." instance=ExtResource( 6 )]
-position = Vector2( 247, 442 )
+position = Vector2( 249, 442 )
 
 [node name="short7" parent="." instance=ExtResource( 6 )]
-position = Vector2( 130, 442 )
+position = Vector2( 131, 442 )
 
 [node name="short8" parent="." instance=ExtResource( 6 )]
-position = Vector2( 794, 332 )
+position = Vector2( 796, 213 )
 
 [node name="short9" parent="." instance=ExtResource( 6 )]
 position = Vector2( 943, 140 )
 rotation = 1.5708
 
 [node name="short10" parent="." instance=ExtResource( 6 )]
-position = Vector2( 893, 279 )
+position = Vector2( 897, 260 )
 rotation = -3.14159
 
+[node name="short12" parent="." instance=ExtResource( 6 )]
+position = Vector2( 898, 441 )
+
 [node name="short11" parent="." instance=ExtResource( 6 )]
-position = Vector2( 852, 559 )
+position = Vector2( 849, 394 )
 rotation = 1.5708
 
 [node name="long" parent="." instance=ExtResource( 7 )]
@@ -114,20 +313,30 @@ rotation = 1.5708
 position = Vector2( 845, 211 )
 
 [node name="long4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 969, 423 )
+position = Vector2( 1309, 540 )
 rotation = 1.5708
 
-[connection signal="body_entered" from="door_button" to="Player" method="_on_door_button_body_entered"]
+[node name="Controls" type="Sprite" parent="."]
+position = Vector2( 522, 322 )
+scale = Vector2( 0.174242, 0.171747 )
+texture = ExtResource( 15 )
+
+[node name="Objectiu" type="Sprite" parent="."]
+position = Vector2( 522, 137 )
+scale = Vector2( 0.174242, 0.171747 )
+texture = ExtResource( 16 )
+
 [connection signal="body_entered" from="door_button" to="2nPlayer2" method="_on_door_button_body_entered"]
 [connection signal="body_entered" from="door_button" to="2nPlayer" method="_on_door_button_body_entered"]
-[connection signal="body_entered" from="Area2D2" to="Player" method="_on_Area2D2_body_entered"]
+[connection signal="body_entered" from="door_button" to="Player" method="_on_door_button_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="2nPlayer2" method="_on_Area2D2_body_entered"]
-[connection signal="body_exited" from="Area2D2" to="Player" method="_on_Area2D2_body_exited"]
+[connection signal="body_entered" from="Area2D2" to="Player" method="_on_Area2D2_body_entered"]
 [connection signal="body_exited" from="Area2D2" to="2nPlayer" method="_on_Area2D2_body_exited"]
-[connection signal="body_entered" from="Area2D" to="Player" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="Player" method="_on_Area2D2_body_exited"]
 [connection signal="body_entered" from="Area2D" to="2nPlayer" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Player" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="2nPlayer" method="_on_Area2D_body_exited"]
+[connection signal="body_exited" from="Area2D" to="Player" method="_on_Area2D_body_exited"]
 
-[editable path="down_wall"]
 [editable path="up_wall"]
+[editable path="down_wall"]

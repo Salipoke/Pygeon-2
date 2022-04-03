@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/20 - Good Time.ogg-09a2716fd25d1f0e8fae0a4708c31901.oggstr"
+
+[deps]
+
+source_file="res://sprites/NinjaAdventure/Musics/20 - Good Time.ogg"
+dest_files=[ "res://.import/20 - Good Time.ogg-09a2716fd25d1f0e8fae0a4708c31901.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

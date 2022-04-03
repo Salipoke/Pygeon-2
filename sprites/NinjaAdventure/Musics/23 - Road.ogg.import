@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/23 - Road.ogg-e3fef4dd6212a9c6a8e0c4a88947485f.oggstr"
+
+[deps]
+
+source_file="res://sprites/NinjaAdventure/Musics/23 - Road.ogg"
+dest_files=[ "res://.import/23 - Road.ogg-e3fef4dd6212a9c6a8e0c4a88947485f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

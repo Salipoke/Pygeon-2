@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Fx.wav-72eadc0826b712bcf770cc86bc63b533.sample"
+
+[deps]
+
+source_file="res://sprites/NinjaAdventure/Sounds/Game/Fx.wav"
+dest_files=[ "res://.import/Fx.wav-72eadc0826b712bcf770cc86bc63b533.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
