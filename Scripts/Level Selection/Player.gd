@@ -27,6 +27,8 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("down"):
 		vel += Vector2.DOWN * base_vel
 		dir[1] = 0
+	if Input.is_action_just_pressed('e'):
+		door_slide1 = 3
 	if door_slide1 == 3:
 		get_tree().change_scene("res://Scenes/Ending.tscn")
 	vel = move_and_slide(vel)
